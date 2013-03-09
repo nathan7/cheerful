@@ -5,7 +5,6 @@
   "main": "cheerful.js",
   "dependencies": {
     "hyperquestionable": "~1.0.0",
-    "once": "~1.1.1",
     "cheerio": "~0.10.7"
   },
   "devDependencies": {},
