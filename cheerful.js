@@ -3,15 +3,17 @@ var cheerio = require('cheerio')
 
 module.exports =
 function request$(url, cb) {
-  request(url, function(err, body) {
+  request(url, function(err, body, res) {
     if (err) return cb(err)
     var $
     try {
       $ = cheerio.load(body)
     }
     catch (e) {
+      e.statusCode = res.statusCode
       return cb(e)
     }
+    $.statusCode = res.statusCode
     cb(null, $)
   })
 }

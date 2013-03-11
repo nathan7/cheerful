@@ -4,7 +4,7 @@
   "description": "the composition of cheerio and hyperquestionable",
   "main": "cheerful.js",
   "dependencies": {
-    "hyperquestionable": "~1.0.0",
+    "hyperquestionable": "~2.0.0",
     "cheerio": "~0.10.7"
   },
   "devDependencies": {},
