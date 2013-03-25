@@ -8,6 +8,8 @@ var url = process.argv[2]
 
 request$(url, function(err, $) {
   if (err) console.error('error:', err)
+  if (selector)
+    return process.exit(console.log($(selector)))
   global.err = err
   global.$ = $
   require('repl').start({})
