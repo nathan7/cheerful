@@ -9,7 +9,9 @@
 
 ## API
 
-    var request$ = require('cheerful')
+```javascript
+var request$ = require('cheerful')
+```
 
 ### request$(url, function cb(err, $))
 
