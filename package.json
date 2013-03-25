@@ -1,6 +1,6 @@
 {
   "name": "cheerful",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "the composition of cheerio and hyperquestionable",
   "main": "cheerful.js",
   "bin": "cli.js",
