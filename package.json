@@ -3,6 +3,7 @@
   "version": "2.1.0",
   "description": "the composition of cheerio and hyperquestionable",
   "main": "cheerful.js",
+  "bin": "cli.js",
   "dependencies": {
     "hyperquestionable": "~2.0.0",
     "cheerio": "~0.10.7"
