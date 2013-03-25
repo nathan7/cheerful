@@ -11,9 +11,11 @@ function request$(url, cb) {
     }
     catch (e) {
       e.statusCode = res.statusCode
+      e.headers = res.headers
       return cb(e)
     }
     $.statusCode = res.statusCode
+    $.headers = res.headers
     cb(null, $)
   })
 }
