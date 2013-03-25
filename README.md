@@ -21,11 +21,16 @@ var request$ = require('cheerful')
   Example:
 ```javascript
 var request$ = require('cheerful')
-request$('http://google.com', function(err, $) {
+request$('http://google.com', findDoodle)
+function findDoodle(err, $) {
+  var headers = (err || $).headers
+  if (headers && headers.location)
+    return request$(headers.location, findDoodle)
   if (err) return console.error('error', err)
-  var img = $('center img').attr('src')
+  var div = $('center div[title="Google"]')
+  var img = 'http://google.com'+ div.attr('style').match(/url\((\S+)\)/)[1]
   console.log('today\'s Google Doodle:', img)
-})
+}
 ```
 
 ## License
