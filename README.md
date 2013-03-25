@@ -27,6 +27,7 @@ function findDoodle(err, $) {
   if (headers && headers.location)
     return request$(headers.location, findDoodle)
   if (err) return console.error('error', err)
+
   var div = $('center div[title="Google"]')
   var img = 'http://google.com'+ div.attr('style').match(/url\((\S+)\)/)[1]
   console.log('today\'s Google Doodle:', img)
